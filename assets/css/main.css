@@ -10,12 +10,12 @@ html {
   font-family: "Roboto", sans-serif;
 }
 
-
-
+/* Hide scrollbar */
 ::-webkit-scrollbar {
   @apply hidden;
 }
 
+/* Custom layers */
 @layer components {
   .text-shadow {
     text-shadow: 4px 5px 2px rgba(0, 0, 0, 0.3);
@@ -26,13 +26,15 @@ html {
   }
 
   .weather-list {
-    @apply mt-[1.27rem] text-lg flex justify-between items-center;
+    @apply mt-[1.32rem] text-lg flex justify-between items-center;
   }
 
   .wrapper {
     @apply max-w-[1440px] mx-auto px-2 relative;
   }
 }
+
+/* Background image animate */
 
 .backgroundAnimate {
   animation: fadeIn 0.5s ease;
@@ -45,5 +47,31 @@ html {
 
   to {
     opacity: 1;
+  }
+}
+
+/* Responsive */
+
+@media (max-width: 1440px) {
+  .weather__content{
+    @apply flex-col;
+  }
+
+  .weather__map{
+    @apply mt-4;
+  }
+
+  .weather__regions{
+    @apply max-w-full;
+  }
+
+  .weather__details{
+    @apply w-full;
+  }
+}
+
+@media(max-width: 420px) {
+  .weather__uzbekistan{
+    @apply -mt-48;
   }
 }

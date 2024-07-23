@@ -1,21 +1,21 @@
 <template>
     <div class="flex flex-col gap-4 text-white p-6 -mt-52">
-        <div class="flex gap-2">
-            <p class="flex text-shadow">
-                <span class="text-8xl">{{ Math.round(currentRegion?.temp) }}</span>
-                <span class="text-4xl">°C</span>
+        <div class="flex gap-6">
+            <p class="flex items-center text-shadow">
+                <span class="sm:text-8xl text-6xl">{{ Math.round(currentRegion?.temp) }}</span>
+                <span class="sm:text-4xl text-2xl">°C</span>
             </p>
 
             <div>
-                <img class="object-cover w-[80px]" :src="`/icons/${currentRegion?.icon}.png`" alt="weather icon">
+                <img class="object-contain w-[80px] h-[80px]" :src="`/icons/${currentRegion?.icon}.png`" alt="weather icon">
 
                 <span class="text-lg">{{ currentRegion?.description }}</span>
             </div>
         </div>
 
         <div class="text-shadow">
-            <h1 class="text-6xl font-semibold">{{ currentRegion?.name }}</h1>
-            <p class="text-xl ml-2 mt-2">{{ currentDate }}</p>
+            <h1 class="sm:text-6xl text-5xl font-semibold">{{ currentRegion?.name }}</h1>
+            <p class="sm:text-xl text-lg ml-2 mt-2">{{ currentDate }}</p>
         </div>
     </div>
 </template>

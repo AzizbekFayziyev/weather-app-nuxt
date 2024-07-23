@@ -29,7 +29,7 @@ const { visible } = defineProps(["visible"]);
 
 <style scope>
 .bg {
-    @apply bg-primary w-full h-full left-0 top-0 z-50 fixed grid place-content-center transition-opacity duration-500;
+    @apply bg-slate-500 w-full h-full left-0 top-0 z-50 fixed grid place-content-center transition-opacity duration-500;
 }
 
 .cnt {

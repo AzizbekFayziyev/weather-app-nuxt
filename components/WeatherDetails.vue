@@ -1,7 +1,7 @@
 <template>
-    <div class="mt-8 flex flex-col gap-4 overflow-x-hidden pb-12">
+    <div class="flex flex-col gap-4 overflow-x-hidden xl:pb-12 pb-8">
         <!-- Weakly weather info -->
-        <Box class="p-6 w-[405px]">
+        <Box class="weather__details p-6 w-[405px]">
             <h3 class="text-info flex justify-between items-center">6-Day forecast
 
                 <button @click="toggleMode = !toggleMode" class="hover:text-primary text-lg">
@@ -23,7 +23,7 @@
             </h5>
         </Box>
         <!-- Weather Details -->
-        <Box class="p-6 w-[405px]">
+        <Box class="weather__details p-6 w-[405px]">
             <h3 class="text-info">Current weather details</h3>
 
             <h5 class="weather-list">

@@ -1,20 +1,21 @@
 <template>
     <!-- All regions weather info -->
-    <div class="max-w-[1000px] mt-4">
+    <div class="weather__regions max-w-[1000px] mt-4">
         <div ref="scrollContainer" @mousedown="startScroll" @mousemove="scroll" @mouseup="stopScroll"
             @mouseleave="stopScroll" @touchstart="startScroll" @touchmove="scroll" @touchend="stopScroll"
             class="flex gap-6 overflow-x-auto overflow-y-hidden cursor-pointer select-none">
             <Box v-for="region in sortedRegions" @click="handleFindRegion(region)"
-                class="p-6 min-w-[350px] transition-colors duration-300"
+                class="p-6 sm:min-w-[350px] min-w-[300px] transition-colors duration-300"
                 :class="{
                     'bg-primary/60': currentRegion?.id === region.id
                 }" :key="region.id">
                 <div class="flex items-center justify-between">
-                    <img class="-ml-8 pointer-events-none" width="150" :src="`/icons/${region?.icon}.png`" alt="weather icon">
+                    <img class="-ml-8 pointer-events-none h-[150px] object-contain" width="150" :src="`/icons/${region?.icon}.png`" alt="weather icon">
+                    
                     <div>
-                        <h6 class="text-6xl font-semibold">{{ Math.round(region?.temp) }}<sup class="text-4xl">°C</sup>
+                        <h6 class="sm:text-6xl text-5xl font-semibold">{{ Math.round(region?.temp) }}<sup class="sm:text-4xl text-3xl">°C</sup>
                         </h6>
-                        <h5 class="text-2xl mt-2">{{ region?.name }}</h5>
+                        <h5 class="sm:text-2xl text-xl mt-2">{{ region?.name }}</h5>
                     </div>
                 </div>
 

@@ -7,12 +7,12 @@
 
 
     <!-- Content -->
-    <div class="wrapper">
-        <div class="flex justify-between gap-4 w-full">
-            <div class="mt-8">
+    <div class="wrapper mt-8">
+        <div class="weather__content flex justify-between gap-4 w-full">
+            <div>
                 <Box>
                     <!-- Uzbekistan svg map -->
-                    <div class="-mt-16">
+                    <div class="weather__map -mt-16">
                         <Uzbekistan :regions="regions" :currentRegion="currentRegion"
                             :fetchCurrentData="fetchCurrentData" />
                     </div>
