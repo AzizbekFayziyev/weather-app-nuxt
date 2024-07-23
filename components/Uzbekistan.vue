@@ -1,8 +1,8 @@
 <template>
     <!-- Uzbekistan svg map -->
-    <svg class="weather__uzbekistan lg:max-w-[80%] w-full mx-auto z-50 relative stroke-white md:mt-0 sm:-mt-28 -mt-36" baseprofile="tiny" height="652" stroke-linecap="round"
-        stroke-linejoin="round" stroke-width=".3" version="1.2" viewbox="0 0 1000 652"
-        xmlns="http://www.w3.org/2000/svg">
+    <svg class="weather__uzbekistan lg:max-w-[80%] w-full mx-auto z-50 relative stroke-white md:mt-0 sm:-mt-28 -mt-36"
+        baseprofile="tiny" height="652" stroke-linecap="round" stroke-linejoin="round" stroke-width=".3" version="1.2"
+        viewbox="0 0 1000 652" xmlns="http://www.w3.org/2000/svg">
         <g id="features">
             <!-- Regions -->
             <template v-for="region in regions" :key="region.id">
@@ -18,8 +18,8 @@
     </svg>
 
     <!-- Modal info -->
-    <div ref="modalRef" class="absolute bg-gray-400 border border-white p-3 rounded-xl z-50 hidden"
-        style="transform: translate(-30%, -150%);">
+    <div ref="modalRef" style="transform: translate(-50%, -50%);"
+        class="absolute left-[50%] top-[50%] bg-gray-400 border border-white p-3 rounded-xl z-50 hidden">
         <h2>{{ modalText }}</h2>
     </div>
 </template>
@@ -48,8 +48,8 @@ const onHandleHover = (event) => {
     const modalEl = modalRef.value;
 
     if (modalEl) {
-        modalEl.style.left = `${event.pageX}px`;
-        modalEl.style.top = `${event.pageY}px`;
+        modalEl.style.left = `${event.offsetX + 150}px`;
+        modalEl.style.top = `${event.offsetY - 100}px`;
         modalEl.style.display = "block";
     }
 }

@@ -3,7 +3,7 @@
     <img v-for="img in regions" :class="{
         hidden: img?.id !== currentRegion?.id
     }" class="backgroundAnimate fixed left-0 top-0 w-full h-full object-cover brightness-50 pointer-events-none select-none -z-10"
-        :src="`/regions/${currentRegion?.id}.png`" alt="tashkent city">
+        :src="`/regions/${currentRegion?.id}.jpg`" alt="tashkent city">
 
 
     <!-- Content -->
